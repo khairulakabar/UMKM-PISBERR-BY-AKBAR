@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PISBER | Strawberry Banana</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img src="assets/produk4.jpg" alt="Logo Pisber">
+            <span>PISBER.</span>
+        </a>
+
+        <div class="menu" id="menu">
+            <a href="#home">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#produk">Produk</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#ulasan">Ulasan</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+
+        <a href="#pesan" class="nav-btn">Pesan Sekarang</a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <span class="tag">🍓 Fresh & Delicious</span>
+
+        <h1>
+            Nikmati Manisnya
+            <span>PISBER</span>
+        </h1>
+
+        <p>
+            Camilan pisang lezat dengan berbagai pilihan
+            rasa yang bikin harimu semakin menyenangkan.
+            Dibuat fresh dengan rasa istimewa!
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#produk" class="btn-primary">Lihat Produk</a>
+            <a href="#tentang" class="btn-secondary">Tentang Kami</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="assets/produk1.jpg" alt="Produk Pisber Strawberry">
+        <div class="floating">🍓 Fresh Everyday</div>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<section class="about section" id="tentang">
+    <div class="section-title">
+        <span>TENTANG KAMI</span>
+        <h2>Kenalan dengan PISBER</h2>
+        <p>Rasa lezat, kualitas terbaik, dan dibuat dengan sepenuh hati.</p>
+    </div>
+
+    <div class="about-content">
+        <img src="assets/produk5.jpg" alt="Tentang Pisber">
+
+        <div>
+            <h2>Lebih dari Sekadar Camilan 🍓</h2>
+            <p>
+                PISBER adalah usaha kuliner yang menghadirkan
+                camilan pisang dengan pilihan rasa yang lezat.
+                Kami menyediakan varian strawberry, coklat,
+                dan taro untuk menemani waktu santaimu.
+            </p>
+            <p>
+                Dengan harga terjangkau dan rasa yang nikmat,
+                PISBER siap menjadi camilan favoritmu!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUK -->
+<section class="products section" id="produk">
+    <div class="section-title">
+        <span>MENU FAVORIT</span>
+        <h2>Produk Kami</h2>
+        <p>Pilih rasa favoritmu dan nikmati kelezatannya!</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="assets/produk1.jpg" alt="Strawberry">
+            <div class="product-info">
+                <span class="flavor">🍓 Strawberry</span>
+                <h3>PISBER Strawberry</h3>
+                <p>Pisang dengan rasa strawberry yang manis dan lezat.</p>
+                <h3 class="price">Rp10.000</h3>
+                <button onclick="pilihProduk('Strawberry')">
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/produk2.jpg" alt="Coklat">
+            <div class="product-info">
+                <span class="flavor">🍫 Chocolate</span>
+                <h3>PISBER Coklat</h3>
+                <p>Perpaduan pisang dan rasa coklat yang nikmat.</p>
+                <h3 class="price">Rp10.000</h3>
+                <button onclick="pilihProduk('Coklat')">
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/produk3.jpg" alt="Taro">
+            <div class="product-info">
+                <span class="flavor">💜 Taro</span>
+                <h3>PISBER Taro</h3>
+                <p>Rasa taro yang unik dengan sensasi manis.</p>
+                <h3 class="price">Rp10.000</h3>
+                <button onclick="pilihProduk('Taro')">
+                    Pesan Sekarang
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PEMESANAN -->
+<section class="order section" id="pesan">
+    <div class="section-title">
+        <span>ORDER NOW</span>
+        <h2>Pesan PISBER Kamu!</h2>
+        <p>Isi pesananmu dan langsung hubungi kami melalui WhatsApp.</p>
+    </div>
+
+    <div class="order-box">
+        <form id="orderForm">
+
+            <label>Nama Pemesan</label>
+            <input type="text" id="nama"
+                placeholder="Masukkan nama kamu" required>
+
+            <label>Pilih Produk</label>
+            <select id="produkPilihan" required>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Coklat">Coklat</option>
+                <option value="Taro">Taro</option>
+            </select>
+
+            <label>Jumlah Pesanan</label>
+            <input type="number" id="jumlah"
+                min="1" value="1" required>
+
+            <label>Catatan Pesanan</label>
+            <textarea id="catatan"
+                placeholder="Contoh: Pesanan tanpa tambahan..."></textarea>
+
+            <div class="total-box">
+                <span>Total Harga</span>
+                <h2 id="totalHarga">Rp10.000</h2>
+            </div>
+
+            <button type="submit" class="btn-primary full">
+                Pesan via WhatsApp
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<!-- GALERI -->
+<section class="gallery section" id="galeri">
+    <div class="section-title">
+        <span>OUR GALLERY</span>
+        <h2>Galeri PISBER</h2>
+        <p>Beberapa momen dan produk dari PISBER.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <img src="assets/produk5.jpg" alt="Galeri Pisber 1">
+        <img src="assets/produk6.jpg" alt="Galeri Pisber 2">
+        <img src="assets/produk1.jpg" alt="Produk Strawberry">
+    </div>
+</section>
+
+<!-- ULASAN -->
+<section class="reviews section" id="ulasan">
+    <div class="section-title">
+        <span>TESTIMONI</span>
+        <h2>Apa Kata Mereka?</h2>
+        <p>Bagikan pengalamanmu setelah menikmati PISBER!</p>
+    </div>
+
+    <div class="review-box">
+
+        <div id="daftarKomentar">
+            <div class="comment">
+                <div class="comment-icon">🍓</div>
+                <div>
+                    <h4>Pelanggan PISBER</h4>
+                    <p>Rasanya enak dan harganya terjangkau!</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="commentForm">
+            <h3>Tulis Komentar</h3>
+
+            <input type="text" id="namaKomentar"
+                placeholder="Nama kamu" required>
+
+            <textarea id="isiKomentar"
+                placeholder="Bagaimana pengalamanmu?" required></textarea>
+
+            <button type="submit" class="btn-primary">
+                Kirim Komentar
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="contact section" id="kontak">
+    <div class="section-title">
+        <span>CONTACT US</span>
+        <h2>Hubungi PISBER</h2>
+        <p>Kami siap melayani pesananmu setiap hari!</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <div>📱</div>
+            <h3>WhatsApp</h3>
+            <p>+62 831-7512-2369</p>
+            <a href="https://wa.me/6283175122369" target="_blank">
+                Hubungi Kami
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <div>🕒</div>
+            <h3>Jam Operasional</h3>
+            <p>Setiap Hari</p>
+            <strong>08.00 - 15.00 WIB</strong>
+        </div>
+
+        <div class="contact-card">
+            <div>📍</div>
+            <h3>Lokasi Kami</h3>
+            <p>Kunjungi lokasi PISBER</p>
+            <a href="https://maps.app.goo.gl/PCrQUGfZ5yxHXYDM9"
+                target="_blank">
+                Lihat Google Maps
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>PISBER<span>.</span></h2>
+    <p>Manisnya Rasa, Bahagianya Bersama 🍓</p>
+
+    <div class="footer-links">
+        <a href="#home">Beranda</a>
+        <a href="#produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 PISBER. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
